@@ -51,3 +51,9 @@ Author Information
 ------------------
 
 timon2013
+
+Master branch:
+[![Build Status](https://travis-ci.org/timon2013/ansible-role-opendistro.svg?branch=master)](https://travis-ci.org/timon2013/ansible-role-opendistro)
+
+Dev Branch:
+[![Build Status](https://travis-ci.org/timon2013/ansible-role-opendistro.svg?branch=dev)](https://travis-ci.org/timon2013/ansible-role-opendistro)
