@@ -1,0 +1,20 @@
+---
+- name: Add Configurations - elasticsearch.yml
+  template:
+    src: templates/elasticsearch.yml.j2
+    dest: /etc/elasticsearch/elasticsearch.yml
+    owner: root
+    group: elasticsearch
+    mode: 0440
+  notify: Restart opendistro
+  when: not default_es_conf | bool
+
+- name: Add Configurations - jvm.options
+  template:
+    src: templates/jvm.options.j2
+    dest: /etc/elasticsearch/jvm.options
+    owner: root
+    group: root
+    mode: 0644
+  notify: Restart opendistro
+  when: not default_jvm_conf | bool

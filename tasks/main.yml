@@ -1,0 +1,10 @@
+---
+- include: setup-RedHat.yml
+  when: ansible_os_family == 'RedHat'
+
+- include: configure-RedHat.yml
+  when: ansible_os_family == 'RedHat'
+
+- include: plugins.yml
+  tags:
+    - plugins

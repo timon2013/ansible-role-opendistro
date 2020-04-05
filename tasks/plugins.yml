@@ -1,0 +1,33 @@
+---
+- name: Generate hash for users opendistro
+  shell: |
+    bash {{ opendistro_plugin_dir }}/opendistro_security/tools/hash.sh -p {{ item.pass }}
+    tail -n 1
+  no_log: true
+  register: opendistro_hash
+  loop: "{{ security_plugin_passwords }}"
+  when: not default_security_plugins | bool
+
+- name: Set facts
+  set_fact:
+    hash_item: "{{ item.stdout }}"
+  loop: "{{ opendistro_hash.results }}"
+  no_log: true
+  register: opendistro_hash
+  when: not default_security_plugins | bool
+
+- name: Make a hash list
+  set_fact:
+    opendistro_hash_item: "{{ opendistro_hash.results | map(attribute='ansible_facts.hash_item') | list }}"
+  no_log: true
+  when: not default_security_plugins | bool
+
+- name: Create opendistro_security_plugin_files
+  template:
+    src: "security_plugin.j2"
+    dest: "{{ opendistro_plugin_dir }}/{{ item.path }}"
+    mode: "{{ item.mode | default(omit) }}"
+    owner: "{{ item.owner | default(omit) }}"
+    group: "{{ item.group | default(omit) }}"
+  loop: "{{ opendistro_security_plugin_files }}"
+  when: not default_security_plugins | bool
