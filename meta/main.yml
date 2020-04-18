@@ -16,6 +16,6 @@ galaxy_info:
   galaxy_tags:
     - opendistro
     - elasticsearch
-    - security_plugin
+    - security
 
 dependencies: []
