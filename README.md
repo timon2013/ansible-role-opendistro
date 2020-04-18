@@ -1,6 +1,16 @@
-[![Build Status](https://travis-ci.org/timon2013/ansible-role-opendistro.svg?branch=master)](https://travis-ci.org/timon2013/ansible-role-opendistro)
 Open Distro for Elasticsearch
 =========
+
+Documentation: https://opendistro.github.io/for-elasticsearch-docs
+
+Build
+------------
+
+Master branch:
+[![Build Status](https://travis-ci.org/timon2013/ansible-role-opendistro.svg?branch=master)](https://travis-ci.org/timon2013/ansible-role-opendistro)
+
+Dev Branch:
+[![Build Status](https://travis-ci.org/timon2013/ansible-role-opendistro.svg?branch=dev)](https://travis-ci.org/timon2013/ansible-role-opendistro)
 
 Requirements
 ------------
@@ -51,9 +61,3 @@ Author Information
 ------------------
 
 timon2013
-
-Master branch:
-[![Build Status](https://travis-ci.org/timon2013/ansible-role-opendistro.svg?branch=master)](https://travis-ci.org/timon2013/ansible-role-opendistro)
-
-Dev Branch:
-[![Build Status](https://travis-ci.org/timon2013/ansible-role-opendistro.svg?branch=dev)](https://travis-ci.org/timon2013/ansible-role-opendistro)
