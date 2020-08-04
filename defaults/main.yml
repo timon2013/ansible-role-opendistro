@@ -47,7 +47,7 @@ opendistro_elasticsearch_variables:
  cluster.routing.allocation.disk.threshold_enabled: false
  node.max_local_storage_nodes: 3
 
-
+opendistro_java_home: /usr/lib/jvm/java-11/
 opendistro_java_variables: |
       -Xms1024m
       -Xmx1024m

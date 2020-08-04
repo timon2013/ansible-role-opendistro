@@ -2,11 +2,12 @@
 - name: Generate hash for users opendistro
   shell: |
     bash {{ opendistro_plugin_dir }}/opendistro_security/tools/hash.sh -p {{ item.pass }}
-    tail -n 1
   no_log: true
   register: opendistro_hash
   loop: "{{ security_plugin_passwords }}"
   when: not default_security_plugins | bool
+  environment:
+    JAVA_HOME: "{{ opendistro_java_home }}"
 
 - name: Set facts
   set_fact:
