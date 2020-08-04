@@ -37,6 +37,7 @@ Default variables are in defaults directory.
 | `opendistro_http_port` | 9200 | Number | The http port for elasticsearch |
 | `opendistro_log_dir` | /var/log/elasticsearch | String | The path to log directory |
 | `opendistro_elasticsearch_variables` | deafults/main.yml | Array | The configuration for elasticsearch in elasticsearch.yml file. This is yaml format. |
+| `opendistro_java_home` | /usr/lib/jvm/java-11 | String | The path to java home direcotry |
 | `opendistro_java_variables` | defaults/main.yml | Array | The configuration for jvm in jvm.options file. |
 | `opendistro_plugin_dir` | /usr/share/elasticsearch/plugins | String | The path to plugin directory |
 
