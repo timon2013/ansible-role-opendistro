@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: "{{ server }}" 
   remote_user: root
   roles:
-    - ansible-role-opendistro
+    - timon2013.ansible_role_opendistro
